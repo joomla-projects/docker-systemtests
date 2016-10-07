@@ -29,6 +29,7 @@ RUN rm -rf /tmp/* /var/tmp/*
 # Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=bin --filename=composer
 RUN composer self-update
+RUN git config --global http.postBuffer 524288000
 
 # Start Apache and MySQL
 CMD /usr/bin/mysqld_safe & apache2ctl -D FOREGROUND

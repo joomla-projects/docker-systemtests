@@ -6,7 +6,7 @@ Based on docker Ubuntu 16.04 image
 
 Current image can also be found at dockerhub:
 
-https://hub.docker.com/r/joomlaprojects/joomla-systemtests/builds/
+https://hub.docker.com/r/joomlaprojects/docker-systemtests/
 
 `docker pull joomlaprojects/joomla-systemtests`
 

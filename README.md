@@ -1,6 +1,6 @@
 # Docker Systemtest image
 
-Docker with LAMP setup, firefox and other tools for system tests with codeception.
+Docker with LAMP setup, firefox, chrome and other tools for system tests with codeception.
 
 Based on docker Ubuntu 16.04 image
 
@@ -20,4 +20,5 @@ https://hub.docker.com/r/joomlaprojects/docker-systemtests/
 ### Gui Software
 
 * Firefox
+* Latest Google Chrome
 * Fluxbox and Xvfb (to run selenium tests)

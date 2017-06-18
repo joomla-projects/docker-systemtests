@@ -17,7 +17,7 @@ https://hub.docker.com/r/joomlaprojects/docker-systemtests/
 * PHP 7
 * Composer (System wide)
 
-### Gui Software
+### GUI Software
 
 * Firefox
 * Latest Google Chrome

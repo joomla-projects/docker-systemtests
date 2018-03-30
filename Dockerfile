@@ -8,7 +8,7 @@ ENV HOME /root
 # update the package sources
 RUN apt-get update -qq
 
-RUN apt-get update && apt-get upgrade -y
+RUN apt-get upgrade -y
 
 # we use the enviroment variable to stop debconf from asking questions..
 RUN DEBIAN_FRONTEND='noninteractive' apt-get install -y mysql-server apache2 mysql-client php7.0 \
@@ -28,6 +28,9 @@ ADD config/000-default.conf /etc/apache2/sites-available/000-default.conf
 # clean up tmp files (we don't need them for the image)
 RUN rm -rf /tmp/* /var/tmp/*
 
+#update package source
+RUN apt-get update -qq
+RUN apt-get upgrade -y
 
 # Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=bin --filename=composer

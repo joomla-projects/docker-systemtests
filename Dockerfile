@@ -34,5 +34,7 @@ RUN git config --global http.postBuffer 524288000
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 RUN dpkg -i google-chrome*.deb
 
+RUN apt-get upgrade -y
+
 # Start Apache and MySQL
 CMD /usr/bin/mysqld_safe & apache2ctl -D FOREGROUND

@@ -12,7 +12,11 @@ RUN apt-get update -qq
 RUN DEBIAN_FRONTEND='noninteractive' apt-get install -y mariadb-server mariadb-client apache2 php7.0 \
     php7.0-cli php7.0-curl php7.0-gd php7.0-mysql php7.0-zip php7.0-xml php7.0-ldap php7.0-mbstring libapache2-mod-php7.0 curl \
 	wget firefox unzip git fluxbox libxss1 libappindicator1 libindicator7 openjdk-8-jre xvfb gconf-service fonts-liberation \
-	dbus xdg-utils libasound2 libqt4-dbus libqt4-network libqtcore4 libqtgui4 libpython2.7 libqt4-xml libaudio2 fontconfig nodejs npm
+	dbus xdg-utils libasound2 libqt4-dbus libqt4-network libqtcore4 libqtgui4 libpython2.7 libqt4-xml libaudio2 fontconfig
+
+# Install node
+RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+RUN apt-get install -y nodejs
 
 # package install is finished, clean up
 RUN apt-get clean # && rm -rf /var/lib/apt/lists/*

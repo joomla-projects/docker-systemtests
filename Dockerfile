@@ -15,7 +15,7 @@ RUN DEBIAN_FRONTEND='noninteractive' apt-get install -y mariadb-server mariadb-c
 	dbus xdg-utils libasound2 libqt4-dbus libqt4-network libqtcore4 libqtgui4 libpython2.7 libqt4-xml libaudio2 fontconfig
 
 # Install node
-RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+RUN curl -sL https://deb.nodesource.com/setup_8.x | /bin/sh -
 RUN apt-get install -y nodejs
 
 # package install is finished, clean up

@@ -1,6 +1,6 @@
 # Joomla! System tests
 FROM ubuntu:xenial
-MAINTAINER Yves Hoppe <yves@compojoom.com>
+MAINTAINER Yves Hoppe <yves@compojoom.com>, Robert Deutz <rdeutz@googemail.com>
 
 # Set correct environment variables.
 ENV HOME /root

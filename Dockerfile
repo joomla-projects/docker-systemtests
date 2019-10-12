@@ -16,7 +16,7 @@ RUN DEBIAN_FRONTEND='noninteractive' apt-get install -y mariadb-server libqtgui4
     libqt4-xml libaudio2 fontconfig nodejs npm
 
 # Install npx which is required to trigger our JS testsuite
-npm install -g npx
+RUN npm install -g npx
 
 # package install is finished, clean up
 RUN apt-get clean # && rm -rf /var/lib/apt/lists/*
